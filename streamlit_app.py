@@ -32,8 +32,8 @@ if ingredients_list:
 
     #st.write(my_insert_stmt)
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-    st.text(smoothiefroot_response)
-
+    #st.text(smoothiefroot_response)
+    sf_df = st.dataframe (data=smoothiefroot_response.json(), use_container_width=True)
     #st.stop()
     time_to_insert = st. button ('Submit Order')
 
